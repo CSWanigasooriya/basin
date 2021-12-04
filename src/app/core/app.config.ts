@@ -8,7 +8,7 @@ export interface AppConfig {
 }
 
 export const AppConfig: AppConfig = {
-  title: 'Basin',
+  title: 'BASIN',
   dark_theme: false,
   phone: '+94000000000',
   location: 'Access Tower II, 22nd Floor, 278 Union Pl, Colombo 02000',

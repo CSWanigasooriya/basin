@@ -1,8 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { ErrorComponent } from './shared/error/error.component';
 import { NgModule } from '@angular/core';
 import { SignInComponent } from './modules/sign-in/sign-in.component';
+import { UserComponent } from './modules/user/user.component';
 
 const routes: Routes = [
   {
@@ -12,14 +13,19 @@ const routes: Routes = [
       import('./modules/sign-in/sign-in.module').then((m) => m.SignInModule),
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent,
+    path: 'user',
+    component: UserComponent,
     loadChildren: () =>
-      import('./modules/dashboard/dashboard.module').then(
-        (m) => m.DashboardModule
-      ),
+      import('./modules/user/user.module').then((m) => m.UserModule),
+  },
+  {
+    path: 'error',
+    component: ErrorComponent,
+    loadChildren: () =>
+      import('./shared/error/error.module').then((m) => m.ErrorModule),
   },
   { path: '', redirectTo: 'sign-in', pathMatch: 'full' },
+  { path: '**', redirectTo: 'error' },
 ];
 
 @NgModule({

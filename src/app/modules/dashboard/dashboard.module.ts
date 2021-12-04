@@ -1,20 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { MatListModule } from '@angular/material/list';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { FooterModule } from './../../shared/footer/footer.module';
 import { NgModule } from '@angular/core';
-import { SidebarModule } from 'src/app/shared/sidebar/sidebar.module';
 
 @NgModule({
   declarations: [DashboardComponent],
-  imports: [
-    CommonModule,
-    DashboardRoutingModule,
-    SidebarModule,
-    MatSidenavModule,
-    MatListModule,
-  ],
+  imports: [CommonModule, DashboardRoutingModule, FooterModule],
   exports: [DashboardComponent],
 })
 export class DashboardModule {}

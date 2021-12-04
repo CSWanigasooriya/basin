@@ -107,6 +107,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "basin:build:production",
+            "firebaseProject": "basin-id",
+            "firebaseHostingSite": "basin-id"
+          }
         }
       }
     }
