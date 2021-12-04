@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "basin-id": {
+      "hosting": {
+        "basin": [
+          "basin-id"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "basin-id"
+  }
+}
